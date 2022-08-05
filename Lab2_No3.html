@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2_No3_Login</title>
+</head>
+<body>
+    <h1>เข้าสู่ระบบ</h1>
+    <form action="Lab2_No3_logout.html"> 
+    <table>
+        <tr>
+        <td ><label>Username:</label></td>
+        <td><input type="text" autofocus="autofocus" required></td>
+        </tr>
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><label>กรุณาพิมพ์ตามตัวเลขที่ปรากฏ: <br>1559</label><br>
+            <input type="text" pattern="^1559" maxlength="4" required></td>
+        </tr>
+    </table><br>
+    <input name="submit" type="image" value="submit" src="login.jpg" width="100px" height="50px" >
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มจองทัวร์</title>
+</head>
+<body>
+    <h1>แบบฟอร์มจองทัวร์</h1>
+    <form>
+        <fieldset>
+            <legend><strong>ข้อมูลทั่วไป</strong></legend>
+            <label><strong>ชื่อ-สกุล:</strong></label><br>
+            <input type="text" placeholder="กรอกชื่อ-สกุล" required>*<br>
+            <label><strong>Email:</strong></label><br>
+            <input type="email" required>*<br>
+            <label><strong>โทรศัพท์:</strong></label><br>
+            <input type="tel" value="+66" required>*<br>
+            <label><strong>ที่อยู่:</strong></label><br>
+            <textarea cols="30" rows="3"></textarea><br>
+            <label><strong>รหัสไปรษณีย์:</strong></label>
+            <input type="text" pattern="[0-9]{5}" size="4" maxlength="5" required><br>
+            <label><strong>รูปผู้จอง:</strong></label>
+            <input type="file"><br>
+        </fieldset><br>
+        <fieldset>
+            <legend><strong>ข้อมูลเข้าสู่ระบบ</strong></legend>
+            <label><strong>Usename:</strong></label><br>
+            <input type="text" pattern="\w+" minlength="8" required><br>
+            <label><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ _ ตั้งแต่ 8 ตัวขึ้นไป</i></label><br>
+            <label><strong>Password:</strong></label><br>
+            <input type="text"  minlength="8" required><br>
+            <label><i>ประกอบด้วยตัวอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i></label><br>
+        </fieldset><br>
+        <fieldset>
+            <legend><strong>ข้อมูลทัวร์ที่ต้องการ</strong></legend>
+            <label><strong>แพ็คเก็จทัวร์:</strong></label>
+            <select id="tour" name="tour">
+                <option value="select">--select--</option>
+                <option value="japan">Japan</option>
+                <option value="america">America</option>
+                <option value="china">China</option>
+            </select><br>
+            <label><strong>วันที่เดินทาง:</strong></label>
+            <input type="date" required><br>
+            <label><strong>จำนวนผู้เดินทาง:</strong></label>
+            <input type="number" min="1" max="10" required><br>
+            <label><strong>เน้นการท่องเที่ยวแบบใด?:</strong></label><br>
+            <input type="checkbox"> <label><strong>ชอปปิ้ง</strong></label><br>
+            <input type="checkbox"> <label><strong>ธรรมชาติ</strong></label><br>
+            <input type="checkbox"> <label><strong>ทะเล</strong></label><br>
+        </fieldset>
+        <label><strong>ยอมรับเงื่อนไขและข้อตกลง</strong></label>
+        <input type="radio" name="agreement" value="agree" checked="checked">
+        <label><strong>I agree</strong></label>
+        <input type="radio" name="agreement" value="disagree">
+        <label><strong>I disagree &emsp;</strong></label>   
+        <input type="submit" value="จอง">
+    </form>
+</body>
+</html>
